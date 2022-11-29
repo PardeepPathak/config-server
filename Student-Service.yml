@@ -1,0 +1,18 @@
+server:
+  port: 5052
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy:  ANT_PATH_MATCHER
+eureka:
+  client:
+     serviceUrl:
+        defaultZone: http://localhost:8761/eureka
+     instance:
+     preferIpAddress: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        -       health
